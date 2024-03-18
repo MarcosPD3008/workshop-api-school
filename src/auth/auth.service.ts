@@ -20,7 +20,8 @@ export async function login(req:any, res:any) {
         const userObj = {
             id: user.id,
             name: user.fullName,
-            role: role
+            role: role.name,
+            permissions: role.permissions
         }
         const token = jwt.sign(userObj, secret, { expiresIn: '1h' });
         res.status(200).send({ token });
