@@ -1,0 +1,129 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "fullName": "Admin",
+      "username": "admin",
+      "password": "admin",
+      "roleId": 1
+    },
+    {
+      "id": 2,
+      "fullName": "Juan Pila",
+      "username": "teacher",
+      "password": "teacher",
+      "roleId": 2
+    },
+    {
+      "id": 3,
+      "fullName": "Manuel Perez",
+      "username": "student",
+      "password": "student",
+      "roleId": 3
+    }
+  ],
+  "roles": [
+    {
+      "id": 1,
+      "name": "admin",
+      "description": "Administrator",
+      "permissions": [
+        "student.read",
+        "student.write",
+        "student.delete",
+        "student.update",
+        "teacher.read",
+        "teacher.write",
+        "teacher.delete",
+        "teacher.update"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "teacher",
+      "description": "Teacher",
+      "permissions": [
+        "student.read",
+        "teacher.read",
+        "teacher.update"
+      ]
+    },
+    {
+      "id": 3,
+      "name": "student",
+      "description": "Student",
+      "permissions": [
+        "student.read",
+        "student.update"
+      ]
+    }
+  ],
+  "subjects":[
+    {
+      "id": 1,
+      "name": "Math"
+    },
+    {
+      "id": 2,
+      "name": "Science"
+    },
+    {
+      "id": 3,
+      "name": "History"
+    }
+  ],
+  "subjectsTeachers":[
+    {
+      "id": 1,
+      "usersId": 2,
+      "subjectId": 1
+    },
+    {
+      "id": 2,
+      "usersId": 2,
+      "subjectId": 2
+    },
+    {
+      "id": 3,
+      "usersId": 2,
+      "subjectId": 3
+    }
+  ],
+  "subjectsStudents":[
+    {
+      "id": 1,
+      "usersId": 3,
+      "subjectsId": 1
+    },
+    {
+      "id": 2,
+      "usersId": 3,
+      "subjectsId": 2
+    },
+    {
+      "id": 3,
+      "usersId": 1,
+      "subjectsId": 3
+    }
+  ],
+  "grades":[
+    {
+      "id": 1,
+      "usersId": 3,
+      "subjectId": 1,
+      "grade": 90
+    },
+    {
+      "id": 2,
+      "usersId": 3,
+      "subjectId": 2,
+      "grade": 80
+    },
+    {
+      "id": 3,
+      "usersId": 3,
+      "subjectId": 3,
+      "grade": 70
+    }
+  ]
+}
