@@ -2,7 +2,7 @@ import JsonServer from 'json-server';
 import { Request, Response, NextFunction } from "express";
 import { registerRoutes } from './routes';
 import jwt from 'jsonwebtoken';
-import { roleSchema, userSchema } from '../schemas/index.schema';
+import { gradeSchema, roleSchema, subjectSchema, subjectStudentSchema, subjectTeacherSchema, userSchema } from '../schemas/index.schema';
 const secret = 'workshop_123';
 
 class Server{
@@ -56,7 +56,6 @@ class Server{
     private tokenValidator = (req: Request, res: Response, next: NextFunction) => {
         const openPaths = ['auth']; // Adjust according to your auth paths
         const root = req.path.split('/')[1];
-        console.log(root);
         if (openPaths.includes(root)) return next();
 
         const token = req.headers.authorization?.split(' ')[1]; // Assuming token is a Bearer token
@@ -79,7 +78,11 @@ class Server{
 
 const schemas = {
     users: userSchema,
-    roles: roleSchema
+    roles: roleSchema,
+    grades: gradeSchema,
+    subjects: subjectSchema,
+    subjectsTeachers: subjectTeacherSchema,
+    subjectsStudents: subjectStudentSchema,
 } as any;
 
 export default Server;
