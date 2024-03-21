@@ -2,24 +2,36 @@
   "users": [
     {
       "id": 1,
-      "fullName": "Admin",
+      "fullName": "Admin 1",
       "username": "admin",
       "password": "admin",
-      "roleId": 1
+      "roleId": 1,
+      "updatedAt": 1711046961151,
+      "isActive": true
     },
     {
       "id": 2,
       "fullName": "Juan Pila",
       "username": "teacher",
       "password": "teacher",
-      "roleId": 2
+      "roleId": 2,
+      "isActive": true
     },
     {
       "id": 3,
       "fullName": "Manuel Perez",
       "username": "student",
       "password": "student",
-      "roleId": 3
+      "roleId": 3,
+      "isActive": true
+    },
+    {
+      "id": 4,
+      "fullName": "Manuel jimenez",
+      "username": "student",
+      "password": "student",
+      "roleId": 3,
+      "isActive": true
     }
   ],
   "roles": [
@@ -58,7 +70,7 @@
       ]
     }
   ],
-  "subjects":[
+  "subjects": [
     {
       "id": 1,
       "name": "Math"
@@ -72,7 +84,7 @@
       "name": "History"
     }
   ],
-  "subjectsTeachers":[
+  "subjectsTeachers": [
     {
       "id": 1,
       "usersId": 2,
@@ -89,7 +101,7 @@
       "subjectId": 3
     }
   ],
-  "subjectsStudents":[
+  "subjectsStudents": [
     {
       "id": 1,
       "usersId": 3,
@@ -106,7 +118,7 @@
       "subjectsId": 3
     }
   ],
-  "grades":[
+  "grades": [
     {
       "id": 1,
       "usersId": 3,

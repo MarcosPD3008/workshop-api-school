@@ -15,7 +15,7 @@ class Server{
         server.use(JsonServer.bodyParser)
         server.use(this.validate);
         server.use(this.timestamp);
-        server.use(this.tokenValidator);
+        // server.use(this.tokenValidator);
         registerRoutes(server);
         server.use(router);  
         server.listen(3000, () => {
